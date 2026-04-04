@@ -1,8 +1,8 @@
-# Descriptium
+# [Descriptium]()
 
 Descriptium is a fully deployed AI SaaS that automatically generates optimized video descriptions from uploaded videos. Upload a video, pick your tone and target platform, and the AI transcribes and writes a ready-to-use description in under 2 minutes.
 
-## ⚙️ How It Works
+## [⚙️ How It Works]()
 - User uploads a video
 - FFmpeg extracts the audio
 - OpenAI Whisper transcribes it
@@ -11,23 +11,29 @@ Descriptium is a fully deployed AI SaaS that automatically generates optimized v
 
 Fully automated. Under 2 minutes. Works for YouTube, TikTok, Instagram, LinkedIn, and more.
 
-## 🤑 Monetisation — Already Configured
+## [🤑 Monetisation — Already Configured]()
 
 Two live pricing tiers ready to take payments from day one:
 - Creator Plan — €8/month (unlimited usage, 1-day free trial)
 - Business/API Plan — Custom pricing (for agencies & developers)
   
-## 👨‍💻 Tech Stack
+## [👨‍💻 Tech Stack]()
 - Frontend: Next.js 16 + TypeScript + Tailwind CSS v4
 - Backend: Python FastAPI (fully async)
 - Auth & Billing: Clerk (configured, plans live)
 - AI: OpenAI Whisper (transcription) + GPT (description generation)
 - Infrastructure: Docker + Nginx + SSL via Let's Encrypt
-## ❔ How to Setup
+## [❔ How to Setup]()
 ### Clone the repository:
-    git clone https://github.com/yourusername/descriptium.git
+    git clone https://github.com/OeHamoud/Descriptium.git
     cd descriptium
-### Create .env files for backend and frontend using .env.example as a reference.
+### Setup Api Keys
+there are 2 .env files that need to be setup
+
+- app/frontend/.env
+
+- app/backend/.env
+
 ### Build and start all services using Docker Compose:
     docker compose up -d --build
 ### Open your browser:
@@ -36,7 +42,7 @@ Frontend: http://localhost:3000
 Backend API: http://localhost:8000
 
 Nginx handles SSL automatically via Certbot for production domains.
-## 🗂 Docker Compose Overview
+## [🐳 Docker Compose Overview]()
 ```
 services:
   backend:
@@ -98,3 +104,15 @@ volumes:
   letsencrypt:
   certbot_www:
   ```
+## Why This Is Open Source
+
+Descriptium was originally built as a fully functional SaaS product, but for some reason i deceided to Open Source it.
+
+This project is being released to:
+
+- Show a real-world SaaS architecture — not a demo, but a complete, deployable system
+- Provide a production-grade reference for developers building AI products
+
+Your Dearest Arab,
+
+OeHamoud
