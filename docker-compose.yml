@@ -1,0 +1,55 @@
+services:
+  backend:
+    build: ./backend
+    container_name: descriptium-backend
+    env_file:
+      - ./backend/.env
+    volumes:
+      - uploads_data:/app/uploads
+      - audio_data:/app/audio
+      - sqlite_data:/app/sqlite
+    expose:
+      - "8000"
+    restart: unless-stopped
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        - NEXT_PUBLIC_API_URL=https://descriptium.com/api
+    container_name: descriptium-frontend
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_API_URL=https://descriptium.com/api
+    expose:
+      - "3000"
+    depends_on:
+      - backend
+    restart: unless-stopped
+  nginx:
+    image: nginx:1.25-alpine
+    container_name: descriptium-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - certbot_www:/var/www/certbot
+      - letsencrypt:/etc/letsencrypt
+    depends_on:
+      - frontend
+      - backend
+    restart: unless-stopped
+  certbot:
+    image: certbot/certbot
+    container_name: descriptium-certbot
+    volumes:
+      - certbot_www:/var/www/certbot
+      - letsencrypt:/etc/letsencrypt
+    entrypoint: >
+      sh -c "trap exit TERM; while :; do certbot renew --webroot -w /var/www/certbot; sleep 12h & wait $${!}; done"
+volumes:
+  uploads_data:
+  audio_data:
+  sqlite_data:
+  letsencrypt:
+  certbot_www:
