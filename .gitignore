@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.sqlite3
+*.venv/
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+*.egg-info/
+dist/
+build/
+*.log
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Tailwind / PostCSS
+*.css.map
+
+# Docker
+docker-compose.override.yml
+*.bak
