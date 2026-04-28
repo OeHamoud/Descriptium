@@ -1,5 +1,7 @@
 # [Descriptium]()
 
+![image alt](https://github.com/OeHamoud/Descriptium/blob/e5b7f395803e0f7bf9a220dee80f0baa07b599c2/main.png)
+
 Descriptium is a fully deployed AI SaaS that automatically generates optimized video descriptions from uploaded videos. Upload a video, pick your tone and target platform, and the AI transcribes and writes a ready-to-use description in under 2 minutes.
 
 ## [⚙️ How It Works]()
