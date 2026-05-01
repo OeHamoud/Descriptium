@@ -1,5 +1,8 @@
 # [Descriptium]()
-
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](#)[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=fff)](#)
+[![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)](#)![clerk](https://img.shields.io/badge/clerk-000000?style=for-the-badge&logo=clerk&logoColor=white)
+[![pnpm](https://img.shields.io/badge/pnpm-F69220?style=for-the-badge&logo=pnpm&logoColor=fff)](#)
 ![image alt](https://github.com/OeHamoud/Descriptium/blob/e5b7f395803e0f7bf9a220dee80f0baa07b599c2/main.png)
 
 Descriptium is a fully deployed AI SaaS that automatically generates optimized video descriptions from uploaded videos. Upload a video, pick your tone and target platform, and the AI transcribes and writes a ready-to-use description in under 2 minutes.
